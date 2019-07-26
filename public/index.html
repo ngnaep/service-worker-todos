@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODo List</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.blue-light_blue.min.css">
+  <link rel="stylesheet" href="/src/css/app.css">
+  <link rel="stylesheet" href="/src/css/feed.css">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#3f51b5">
+</head>
+<body>
+
+<div id="app">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row" style="height:150px; ">
+      
+        <span class="mdl-layout-title"></span>
+        
+        <div class="mdl-layout-spacer">
+          <img src="/src/images/todoList.jpg"
+          alt="ToDo List"
+          class="main-image"  width = "400px" height="150px">
+        </div>
+          
+      </div>
+    </header>
+    
+    <main class="mdl-layout__content mat-typography">
+      <div id="create-todo">
+        <form>
+          <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="taskId">
+            <label class="mdl-textfield__label" for="taskId" name="taskId">Task ID</label>
+          </div>
+          <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="taskNameInput">
+            <input class="mdl-textfield__input" type="text" id="taskName">
+            <label class="mdl-textfield__label" for="taskName" name="taskName">Task Name</label>
+          </div>
+          <br>
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                    type="submit" id="post-btn">Post!
+            </button>
+          </div>
+          <br>
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--fab" id="close-create-todo-modal-btn" type="button">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </form>
+      </div>
+     
+      <div class="page-content">
+        <h5 class="text-center mdl-color-text--primary">Manage and Update Your Todo List</h5>
+        <div id="show-todos"></div>
+      </div>
+      <div class="floating-button">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+                id="addtodo-button">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> 
+<script defer src="/src/js/material.min.js"></script>
+<script src="/src/js/promise.js"></script>
+<script src="/src/js/fetch.js"></script>
+<script src="/src/js/app.js"></script>
+<script src="/src/js/feed.js"></script>
+</body>
+</html>
